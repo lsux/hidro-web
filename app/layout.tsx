@@ -5,6 +5,10 @@ import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@c
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description: "Admin Dashboard",
+};
 export default function RootLayout({
   children,
 }: {
@@ -27,9 +31,6 @@ export default function RootLayout({
   )
 }
 
-export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Admin Dashboard",
-};
+
 
 
