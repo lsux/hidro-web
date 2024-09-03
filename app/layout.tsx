@@ -5,20 +5,15 @@ import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@c
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Admin Dashboard",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body>
           <SignedOut>
             <SignInButton />
           </SignedOut>
@@ -29,7 +24,12 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description: "Admin Dashboard",
+};
 
 
